@@ -64,22 +64,22 @@ _Fig 3. LIME processing pipeline_
 
 ### Data selection
 ---
-To capture essential interpretation without losing generality in the data selection process, we have used ‘Softmax probability’ and ‘Confusion matrix’ as yardsticks in picking interesting cases out of the big dataset as follows.
+To capture essential interpretation without losing generality in the data selection process, we have used ‘Softmax probability’ and ‘Confusion matrix’ as yardsticks in picking interesting cases out of the big dataset as follows.  
 
-**1. Softmax probability**
-    	Case 1: Border line prediction + Correction prediction
-	Case 2: Border line prediction + Wrong prediction
-	Case 3: Confident prediction + Correct prediction
-	Case 4: Confident prediction + Wrong prediction
+**1. Softmax probability**  
+    	Case 1: Border line prediction + Correction prediction  
+	Case 2: Border line prediction + Wrong prediction  
+	Case 3: Confident prediction + Correct prediction  
+	Case 4: Confident prediction + Wrong prediction  
 
-* _Border line means_: Top two softmax probabilities are different by less than 10%.
-* _Confident prediction means_: The highest probability is more than 80%
+* _Border line means_: Top two softmax probabilities are different by less than 10%.  
+* _Confident prediction means_: The highest probability is more than 80%  
 
 
-**2. Confusion matrix**
-	Case 5: Correct prediction
-	Case 6: First (foremost) class on the wrong prediction
-
+**2. Confusion matrix**  
+	Case 5: Correct prediction  
+	Case 6: First (foremost) class on the wrong prediction  
+  
 
 Jupyter notebooks for the following analysis   
 	* Softmax probability (see [codes](https://github.com/PiSchool/deep-interpreting/blob/master/emoji-project/PiSchoolAI-Emoji/Biteam/face_classification/src/lime_interpret_multiple_analysis_sfm.ipynb))  
