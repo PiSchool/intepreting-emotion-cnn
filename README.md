@@ -14,7 +14,7 @@
 
 
 ### Overview 
---------------- 
+--- 
 
 ![intro][image0]  
 _Highlight features (green segments) which contribute to the prediction (LIME tool)_
@@ -24,7 +24,7 @@ We have explored a novel solution based on Local Interpretable Model-agnostic Ex
 In this project, we have experimented with LIME tool[1] on the baseline deep learning model of emotion classifier (Xception) [2] using Kaggle face dataset [3]. For our experiments, we re-trained the emotion classifers on the full images (face and background). We also extended LIME tool to run on the deep models with grayscale images.  
 
 ### The dataset
-----------------
+---
 
 ![data][image1]  
 _Kaggle dataset: emotions_
@@ -37,11 +37,13 @@ number of images   = Angry:3,216, Disgust:344, Fear:3,259, Happy:5,741, Sad:3,86
 
 
 ### Emotion classifier: Convolutional Neural Network
+---
 In this project, we uses convolutional neural network for emotion classification developed by [2] ([github](https://github.com/oarriaga/face_classification)). We have chosen this as the baseline model because it provides a reasonable accuracy with further insights that could be explored using the interpreter. Before we applied the model to the interpreter, we have re-trained the model with full images to confirm the good accuracy that we should expect. We obtained the test accuracy around 66%.
 (see [codes](https://github.com/LukePhairatt/deep-learning-interpretation/blob/master/emoji-project/PiSchoolAI-Emoji/Biteam/face_classification/src/train_emotion_classifier.py))
 
 
 ### Explain the (LIME) explainer
+---
 
 ![pipeline][image2]  
 _LIME processing pipeline_
