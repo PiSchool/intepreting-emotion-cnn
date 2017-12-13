@@ -56,8 +56,8 @@ _Fig 3. LIME processing pipeline_
 
 **“Explanation”**   
 4- Each data sample (masked/pertubed image) is passed to the classifier (the model being explained e.g. our emotion classifier) for the prediction.   
-5- The data instances (binaries) with the corresponding weights (step 3) and the predicted label (step 4- but one label at the time) are then fit to the K-LASSO or Ridge   
-   regression classifier to measure the importance of each feature (segmentation in this case).   
+5- The data instances (binaries) with the corresponding weights (step 3) and the predicted label (step 4- but one label at the time) are then fit to  
+   the K-LASSO or Ridge regression classifier to measure the importance of each feature (segmentation in this case).   
 6- The final output are the weights, which are representing significance of each segmented feature on the given class.   
 7- The positive (support) and negative (against) segments/features are display based on the given thresholding value   
    (e.g. ‘0’ as the separating boundary of being supportive or not).  
