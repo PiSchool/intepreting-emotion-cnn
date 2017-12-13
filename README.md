@@ -38,7 +38,7 @@ number of images   = Angry:3,216, Disgust:344, Fear:3,259, Happy:5,741, Sad:3,86
 
 ### Emotion classifier: Convolutional Neural Network
 In this project, we uses convolutional neural network for emotion classification developed by [2] ([github](https://github.com/oarriaga/face_classification)). We have chosen this as the baseline model because it provides a reasonable accuracy with further insights that could be explored using the interpreter. Before we applied the model to the interpreter, we have re-trained the model with full images to confirm the good accuracy that we should expect. We obtained the test accuracy around 66%.
-(see [codes](https://github.com/LukePhairatt/emoji-project/PiSchoolAI-Emoji/Biteam/face_classification/src/train_emotion_classifier.py))
+(see [codes](https://github.com/LukePhairatt/deep-learning-interpretation/blob/master/emoji-project/PiSchoolAI-Emoji/Biteam/face_classification/src/train_emotion_classifier.py))
 
 
 ### Explain the (LIME) explainer
@@ -80,8 +80,8 @@ To capture essential interpretation without losing generality in the data select
 
 
 Jupyter notebooks for the following analysis 
-	* Softmax probability (see [codes](https://github.com/LukePhairatt/emoji-project/PiSchoolAI-Emoji/Biteam/face_classification/src/lime_interpret_multiple_analysis_sfm.ipynb))
-	* Confusion matrix (see [codes](https://github.com/LukePhairatt/emoji-project/PiSchoolAI-Emoji/Biteam/face_classification/src/lime_interpret_multiple_analysis_cfm.ipynb))
+	* Softmax probability (see [codes](https://github.com/LukePhairatt/deep-learning-interpretation/blob/master/emoji-project/PiSchoolAI-Emoji/Biteam/face_classification/src/lime_interpret_multiple_analysis_sfm.ipynb))
+	* Confusion matrix (see [codes](https://github.com/LukePhairatt/deep-learning-interpretation/blob/master/emoji-project/PiSchoolAI-Emoji/Biteam/face_classification/src/lime_interpret_multiple_analysis_cfm.ipynb))
 
 
 ### Analysis
