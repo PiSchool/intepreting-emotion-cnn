@@ -67,7 +67,7 @@ _Fig 3. LIME processing pipeline_
 ---
 To capture essential interpretation without losing generality in the data selection process, we have used ‘Softmax probability’ and ‘Confusion matrix’ as yardsticks in picking interesting cases out of the big dataset as follows.
 
-1. Softmax probability
+**1. Softmax probability**
     	Case 1: Border line prediction + Correction prediction
 	Case 2: Border line prediction + Wrong prediction
 	Case 3: Confident prediction + Correct prediction
@@ -77,20 +77,20 @@ To capture essential interpretation without losing generality in the data select
 * _Confident prediction means_: The highest probability is more than 80%
 
 
-2. Confusion matrix
+**2. Confusion matrix**
 	Case 5: Correct prediction
 	Case 6: First (foremost) class on the wrong prediction
 
 
-Jupyter notebooks for the following analysis 
-	* Softmax probability (see [codes](https://github.com/LukePhairatt/deep-learning-interpretation/blob/master/emoji-project/PiSchoolAI-Emoji/Biteam/face_classification/src/lime_interpret_multiple_analysis_sfm.ipynb))
-	* Confusion matrix (see [codes](https://github.com/LukePhairatt/deep-learning-interpretation/blob/master/emoji-project/PiSchoolAI-Emoji/Biteam/face_classification/src/lime_interpret_multiple_analysis_cfm.ipynb))
+Jupyter notebooks for the following analysis   
+	* Softmax probability (see [codes](https://github.com/LukePhairatt/deep-learning-interpretation/blob/master/emoji-project/PiSchoolAI-Emoji/Biteam/face_classification/src/lime_interpret_multiple_analysis_sfm.ipynb))  
+	* Confusion matrix (see [codes](https://github.com/LukePhairatt/deep-learning-interpretation/blob/master/emoji-project/PiSchoolAI-Emoji/Biteam/face_classification/src/lime_interpret_multiple_analysis_cfm.ipynb))  
 
 
 ### Analysis
 ---
 
-1. Visualising the features corresponding to EACH class  
+**1. Visualising the features corresponding to EACH class**  
 
 ![analysis][image4]  
 _Fig 4. Corresponding label analysis: how the classifier thinks of these features (positive/negative)_  
@@ -98,14 +98,14 @@ _Fig 4. Corresponding label analysis: how the classifier thinks of these feature
 As for example in the figure 4 (1st row), given the ground truth image ‘angry’, we can understand that the classifier uses an open wide mouth as one of the indication to predict ‘angry’ as it highlighted ‘green’ while other hypothesis emotions (disgust, fear, … ) are displayed with ‘red’ on the same feature.   
 
 
-2. Visualising the facial features on the CORRECTED prediction  
+**2. Visualising the facial features on the CORRECTED prediction**  
 
 ![analysis][image5]  
 _Fig 5. Right prediction: features which the classifier uses to make the (right) prediction_  
 
 From figure 5, row 1 shows the testing images followed by indicating the positive (green) and negative (red) features in row 2 and highlighted only positive features in row 3 without other segments (gray out areas). Using LIME, we are able to visualize and understand of how the classifier correlates the image features to the prediction.  
 
-3. WRONG prediction  
+**3. WRONG prediction**  
 
 ![analysis][image6]  
 _Fig 6. Sad Confusion: a majority of the confusion is 'sad'_  
