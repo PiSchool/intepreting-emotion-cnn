@@ -110,7 +110,7 @@ From figure 5, row 1 shows the testing images followed by indicating the positiv
 ![analysis][image6]  
 _Fig 6. Sad Confusion: a majority of the confusion is 'sad'_  
 
-With the confusion matrix (figure 6), we went deeper to analyse '_why_' majority of the confusion was the 'sad' emotions.  
+With the confusion matrix (figure 6), we went deeper to analyse '_why_' majority of the confusion was the 'sad' emotion.  
 
 
 ![analysis][image7]  
