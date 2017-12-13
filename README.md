@@ -64,6 +64,7 @@ _LIME processing pipeline_
 
 
 ### Data selection
+---
 To capture essential interpretation without losing generality in the data selection process, we have used ‘Softmax probability’ and ‘Confusion matrix’ as yardsticks in picking interesting cases out of the big dataset as follows.
 
 1. Softmax probability
@@ -87,6 +88,7 @@ Jupyter notebooks for the following analysis
 
 
 ### Analysis
+---
 
 1. Visualising the features corresponding to EACH class
 
@@ -118,6 +120,7 @@ From the figure above, we can see that the classifier used the dark tone from th
  
 
 ### Summary and Going Further
+---
 
 ![go][image3]  
 _Analysis on a more safety critical application_
@@ -130,6 +133,7 @@ LIME tool is an open framework. It can be applied to many deep learning models w
 In this project, we focus on the emotion classification with 7 classes. To our knowledge, it raises the question how well the approach perform in a vicinity of larger dataset and classes (e.g. recognition of 500 different objects). Would a local fidelity as in LIME approach still reflect the good interpretation in the global model? This area of work has not been focused in this project and left to be explored in the future. Secondly, with the small number of classes (e.g. 7 emotions), our technique using softmax probability and confusion matrix is sufficient but still exhausting to pick the interesting samples to investigate. With a hundred of classes or more, we need to go deeper in the data selection to capture all possible faults in the model. This makes the process labor intensive. This issue could be addressed in the future research.
 
 ### References
+---
 [1] M. Ribeiro, S. Singh, C. Guestrin, "Why Should I Trust You?": Explaining the Predictions of Any Classifier,  
     Knowledge Discovery and Data Mining (KDD) Conference, 2016, San Francisco, CA, USA   
     (paper: http://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf)  
