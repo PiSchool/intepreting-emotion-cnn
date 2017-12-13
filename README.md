@@ -1,5 +1,6 @@
 # **Interpreting Deep Learning using LIME**
-Pi School of AI Programme
+
+## **Pi School of AI Programme**
 
 [//]: # (Image References)
 [image0]: ./images/intro.png "intro"
@@ -12,9 +13,10 @@ Pi School of AI Programme
 [image7]: ./images/analysis_wrong.png "analysis_wrong"
 
 
-### Overview  
+### Overview 
+--------------- 
 
-![intro][image0]
+![intro][image0]  
 _Highlight features (green segments) which contribute to the prediction (LIME tool)_
 
 We have explored a novel solution based on Local Interpretable Model-agnostic Explanations (called LIME) which visually explains a logic behind on the prediction. We used emotion classification as our case study to determine feasibility of interpreting black-box models within this approach. We demonstrate this by applying the interpreter (LIME) to our emotion classifier to highlight key facial features of each emotion type. By observing the results, we can justify how well this interpretation approach and tool performs based on how substantial these facial captions are aligned with human interpretation.  
@@ -22,6 +24,7 @@ We have explored a novel solution based on Local Interpretable Model-agnostic Ex
 In this project, we have experimented with LIME tool[1] on the baseline deep learning model of emotion classifier (Xception) [2] using Kaggle face dataset [3]. For our experiments, we re-trained the emotion classifers on the full images (face and background). We also extended LIME tool to run on the deep models with grayscale images.  
 
 ### The dataset
+----------------
 
 ![data][image1]
 _Kaggle dataset: emotions_
@@ -40,7 +43,7 @@ In this project, we uses convolutional neural network for emotion classification
 
 ### Explain the (LIME) explainer
 
-![pipeline][image2]
+![pipeline][image2]  
 _LIME processing pipeline_
 
 **“Preprocessing”** 
@@ -85,7 +88,7 @@ Jupyter notebooks for the following analysis
 
 1. Visualising the features corresponding to EACH class
 
-![analysis][image4]
+![analysis][image4]  
 _Corresponding label analysis: how the classifier thinks of these features (positive/negative)_
 
 As for example in the figure above (1st row), given the ground truth image ‘angry’, we can understand that the classifier uses an open wide mouth as one of the indication to predict ‘angry’ as it highlighted ‘green’ while other hypothesis emotions (disgust, fear, … ) are displayed with ‘red’ on the same feature. 
@@ -93,20 +96,20 @@ As for example in the figure above (1st row), given the ground truth image ‘an
 
 2. Visualising the facial features on the CORRECTED prediction
 
-![analysis][image5]
+![analysis][image5]  
 _Right prediction: features which the classifier uses to make the (right) prediction_
 
 From the images above, row 1 shows the testing images followed by indicating the positive (green) and negative (red) features in row 2 and highlighted only positive features in row 3  without other segments (gray out areas). Using LIME, we are able to visualize and understand of how the classifier correlates the image features to the prediction.
 
 3. WRONG prediction
 
-![analysis][image6]
+![analysis][image6]  
 _Sad Confusion: a majority of the confusion is 'sad'_
 
 With the confusion matrix, we went deeper to analyse '_why_' majority of the confusion was the 'sad' emotions.
 
 
-![analysis][image7]
+![analysis][image7]  
 _Wrong prediction: dark tone influences the 'sad' prediction_
 
 From the figure above, we can see that the classifier used the dark tone from the background to indicate the sad emotion, which is undesirable. This is a really profound finding. Without the visualization to understand parts of the logic behind the ‘sad’ prediction, it would be really hard and time consuming to find and understand the issue precisely. In the worst case, it is overlooked.
@@ -114,7 +117,7 @@ From the figure above, we can see that the classifier used the dark tone from th
 
 ### Summary and Going Further
 
-![go][image3]
+![go][image3]  
 _Analysis on a more safety critical application_
 
 
@@ -128,8 +131,9 @@ In this project, we focus on the emotion classification with 7 classes. To our k
 [1] M. Ribeiro, S. Singh, C. Guestrin, "Why Should I Trust You?": Explaining the Predictions of Any Classifier,  
     Knowledge Discovery and Data Mining (KDD) Conference, 2016, San Francisco, CA, USA   
     (paper: http://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf)  
-[2] O. Arriaga, P.G.Plöger and M. Valdenegro, “Real-time Convolutional Neural Networks for Emotion and Gender Classification”,  
-    Free Software and Open Source Conference (FrOSCon), 2017, Bonn-Rhein-Sieg University of Applied Science  
+[2] O. Arriaga, P.G.Plöger and M. Valdenegro, “Real-time Convolutional Neural Networks for Emotion and Gender 
+    Classification”, Free Software and Open Source Conference (FrOSCon), 2017,  
+    Bonn-Rhein-Sieg University of Applied Science  
     (paper: https://arxiv.org/abs/1710.07557)   
 [3] Kaggle, “Challenges in representation learning facial expression recognition challenge”, 2013 Competition,   
     https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data  
