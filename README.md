@@ -90,33 +90,33 @@ Jupyter notebooks for the following analysis
 ### Analysis
 ---
 
-1. Visualising the features corresponding to EACH class
+1. Visualising the features corresponding to EACH class  
 
 ![analysis][image4]  
-_Corresponding label analysis: how the classifier thinks of these features (positive/negative)_
+_Corresponding label analysis: how the classifier thinks of these features (positive/negative)_  
 
-As for example in the figure above (1st row), given the ground truth image ‘angry’, we can understand that the classifier uses an open wide mouth as one of the indication to predict ‘angry’ as it highlighted ‘green’ while other hypothesis emotions (disgust, fear, … ) are displayed with ‘red’ on the same feature. 
+As for example in the figure above (1st row), given the ground truth image ‘angry’, we can understand that the classifier uses an open wide mouth as one of the indication to predict ‘angry’ as it highlighted ‘green’ while other hypothesis emotions (disgust, fear, … ) are displayed with ‘red’ on the same feature.   
 
 
-2. Visualising the facial features on the CORRECTED prediction
+2. Visualising the facial features on the CORRECTED prediction  
 
 ![analysis][image5]  
-_Right prediction: features which the classifier uses to make the (right) prediction_
+_Right prediction: features which the classifier uses to make the (right) prediction_  
 
-From the images above, row 1 shows the testing images followed by indicating the positive (green) and negative (red) features in row 2 and highlighted only positive features in row 3  without other segments (gray out areas). Using LIME, we are able to visualize and understand of how the classifier correlates the image features to the prediction.
+From the images above, row 1 shows the testing images followed by indicating the positive (green) and negative (red) features in row 2 and highlighted only positive features in row 3  without other segments (gray out areas). Using LIME, we are able to visualize and understand of how the classifier correlates the image features to the prediction.  
 
-3. WRONG prediction
+3. WRONG prediction  
 
 ![analysis][image6]  
-_Sad Confusion: a majority of the confusion is 'sad'_
+_Sad Confusion: a majority of the confusion is 'sad'_  
 
-With the confusion matrix, we went deeper to analyse '_why_' majority of the confusion was the 'sad' emotions.
+With the confusion matrix, we went deeper to analyse '_why_' majority of the confusion was the 'sad' emotions.  
 
 
 ![analysis][image7]  
-_Wrong prediction: dark tone influences the 'sad' prediction_
+_Wrong prediction: dark tone influences the 'sad' prediction_  
 
-From the figure above, we can see that the classifier used the dark tone from the background to indicate the sad emotion, which is undesirable. This is a really profound finding. Without the visualization to understand parts of the logic behind the ‘sad’ prediction, it would be really hard and time consuming to find and understand the issue precisely. In the worst case, it is overlooked.
+From the figure above, we can see that the classifier used the dark tone from the background to indicate the sad emotion, which is undesirable. This is a really profound finding. Without the visualization to understand parts of the logic behind the ‘sad’ prediction, it would be really hard and time consuming to find and understand the issue precisely. In the worst case, it is overlooked.  
  
 
 ### Summary and Going Further
