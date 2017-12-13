@@ -1,6 +1,6 @@
 # **Interpreting Deep Learning using LIME**
 
-## **Pi School of AI Programme**
+**Pi School of AI Programme**
 
 [//]: # (Image References)
 [image0]: ./images/intro.png "intro"
@@ -26,13 +26,13 @@ In this project, we have experimented with LIME tool[1] on the baseline deep lea
 ### The dataset
 ----------------
 
-![data][image1]
+![data][image1]  
 _Kaggle dataset: emotions_
 
-Training dataset (22,967 images) 
-image size 	   = 48x48 grayscale 1-channel
-number of classes  = 7 emotions
-number of images   = Angry:3,216, Disgust:344, Fear:3,259, Happy:5,741, Sad:3,863, Surprise:2,533, Neutral:4,011 images
+Training dataset (22,967 images)   
+image size 	   = 48x48 grayscale 1-channel  
+number of classes  = 7 emotions  
+number of images   = Angry:3,216, Disgust:344, Fear:3,259, Happy:5,741, Sad:3,863, Surprise:2,533, Neutral:4,011 images  
 
 
 
