@@ -1,0 +1,18 @@
+dist: trusty
+sudo: false
+language: python
+cache: pip
+python:
+  - "2.7"
+  - "3.5"
+  - "3.6"
+# command to install dependencies
+install:
+  - pip install flake8 numpy scipy
+  - pip install scikit-learn
+  - python setup.py install
+# command to run tests
+script:
+  - py.test lime
+  - flake8 lime
+
