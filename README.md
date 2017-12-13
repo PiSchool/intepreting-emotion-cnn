@@ -17,7 +17,7 @@
 --- 
 
 ![intro][image0]  
-_Highlight features (green segments) which contribute to the prediction (LIME tool)_
+_Fig 1. Highlight features (green segments) which contribute to the prediction (LIME tool)_
 
 We have explored a novel solution based on Local Interpretable Model-agnostic Explanations (called LIME) which visually explains a logic behind on the prediction. We used emotion classification as our case study to determine feasibility of interpreting black-box models within this approach. We demonstrate this by applying the interpreter (LIME) to our emotion classifier to highlight key facial features of each emotion type. By observing the results, we can justify how well this interpretation approach and tool performs based on how substantial these facial captions are aligned with human interpretation.  
 
@@ -27,7 +27,7 @@ In this project, we have experimented with LIME tool[1] on the baseline deep lea
 ---
 
 ![data][image1]  
-_Kaggle dataset: emotions_
+_Fig 2. Kaggle dataset: emotions_
 
 Training dataset (22,967 images)   
 image size 	   = 48x48 grayscale 1-channel  
@@ -46,7 +46,7 @@ In this project, we uses convolutional neural network for emotion classification
 ---
 
 ![pipeline][image2]  
-_LIME processing pipeline_
+_Fig 3. LIME processing pipeline_
 
 **“Preprocessing”** 
 1- The ground truth image is first segmented into different sections using Quickshift segmentation.   
@@ -93,37 +93,37 @@ Jupyter notebooks for the following analysis
 1. Visualising the features corresponding to EACH class  
 
 ![analysis][image4]  
-_Corresponding label analysis: how the classifier thinks of these features (positive/negative)_  
+_Fig 4. Corresponding label analysis: how the classifier thinks of these features (positive/negative)_  
 
-As for example in the figure above (1st row), given the ground truth image ‘angry’, we can understand that the classifier uses an open wide mouth as one of the indication to predict ‘angry’ as it highlighted ‘green’ while other hypothesis emotions (disgust, fear, … ) are displayed with ‘red’ on the same feature.   
+As for example in the figure 4 (1st row), given the ground truth image ‘angry’, we can understand that the classifier uses an open wide mouth as one of the indication to predict ‘angry’ as it highlighted ‘green’ while other hypothesis emotions (disgust, fear, … ) are displayed with ‘red’ on the same feature.   
 
 
 2. Visualising the facial features on the CORRECTED prediction  
 
 ![analysis][image5]  
-_Right prediction: features which the classifier uses to make the (right) prediction_  
+_Fig 5. Right prediction: features which the classifier uses to make the (right) prediction_  
 
-From the images above, row 1 shows the testing images followed by indicating the positive (green) and negative (red) features in row 2 and highlighted only positive features in row 3  without other segments (gray out areas). Using LIME, we are able to visualize and understand of how the classifier correlates the image features to the prediction.  
+From figure 5, row 1 shows the testing images followed by indicating the positive (green) and negative (red) features in row 2 and highlighted only positive features in row 3 without other segments (gray out areas). Using LIME, we are able to visualize and understand of how the classifier correlates the image features to the prediction.  
 
 3. WRONG prediction  
 
 ![analysis][image6]  
-_Sad Confusion: a majority of the confusion is 'sad'_  
+_Fig 6. Sad Confusion: a majority of the confusion is 'sad'_  
 
-With the confusion matrix, we went deeper to analyse '_why_' majority of the confusion was the 'sad' emotions.  
+With the confusion matrix (figure 6), we went deeper to analyse '_why_' majority of the confusion was the 'sad' emotions.  
 
 
 ![analysis][image7]  
-_Wrong prediction: dark tone influences the 'sad' prediction_  
+_Fig 7. Wrong prediction: dark tone influences the 'sad' prediction_  
 
-From the figure above, we can see that the classifier used the dark tone from the background to indicate the sad emotion, which is undesirable. This is a really profound finding. Without the visualization to understand parts of the logic behind the ‘sad’ prediction, it would be really hard and time consuming to find and understand the issue precisely. In the worst case, it is overlooked.  
+From figure 7, we can see that the classifier used the dark tone from the background to indicate the sad emotion, which is undesirable. This is a really profound finding. Without the visualization to understand parts of the logic behind the ‘sad’ prediction, it would be really hard and time consuming to find and understand the issue precisely. In the worst case, it is overlooked.  
  
 
 ### Summary and Going Further
 ---
 
 ![go][image3]  
-_Analysis on a more safety critical application_
+_Fig 8. Analysis on a more safety critical application_
 
 
 Interpreting model has been highlighted as an important aspect to gain trust on deploying any ‘black-box’ models in the real world. As demonstrated in this project, LIME provides the good insights of the emotion classifier which offer insights behind the prediction as well as realizing faults in training the classifier. In addition, the deep hidden issue such as the miss association of dark color tone with ‘sad’ emotion was discovered very quickly with the visualisation. This has saved a lot of time in diagnosing the problem.
