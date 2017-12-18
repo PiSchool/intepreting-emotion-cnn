@@ -147,7 +147,11 @@ In this project, we focus on the emotion classification with 7 classes. To our k
     (paper: https://arxiv.org/pdf/1705.06640.pdf)  
  
 
+# Author
+---
+This project was developed by [Luke Phairatt](https://github.com/LukePhairatt) during [Pi School's AI programme](http://picampus-school.com/programme/school-of-ai/) in Fall 2017.
 
+![photo of Luke Phairatt](http://picampus-school.com/wp-content/uploads/2017/11/IMG_2150-2-150x150.jpg)
 
 
 
