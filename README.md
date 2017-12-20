@@ -75,7 +75,7 @@ $ wget -O ./dataset/kaggle/fer2013/gen_record.py "https://kaggle2.blob.core.wind
 $ python ./dataset/kaggle/fer2013/gen_record.py
 ```
 
-_Move sample tranined model_
+_Move sample trained model_
 ```bash
 $ cp -rf ./fer2013_mini_XCEPTION.hdf5 ./biteam/trained_models/emotion_models/fer2013_mini_XCEPTION.hdf5
 ```
