@@ -60,7 +60,7 @@ $ cp -rf src/lime_image.py interpreters/lime/lime_image.py
 ```
 Note: Make sure lime_image.py (this has been modified from the original one) is in this right destination path 
 
-Load csv dataset and put in the right folder [(link)](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data)
+_Load csv dataset and put in the right folder_ [(link)](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data)
 ```bash
 //mov tar file to ./Dataset/Kaggle/ then unzip to the specific folders
 $ tar -xzf ./dataset/kaggle/fer2013.tar.gz -C ./dataset/kaggle/
@@ -75,7 +75,7 @@ $ wget -O ./dataset/kaggle/fer2013/gen_record.py "https://kaggle2.blob.core.wind
 $ python ./dataset/kaggle/fer2013/gen_record.py
 ```
 
-Move sample tranined model
+_Move sample tranined model_
 ```bash
 $ cp -rf ./fer2013_mini_XCEPTION.hdf5 ./biteam/trained_models/emotion_models/fer2013_mini_XCEPTION.hdf5
 ```
