@@ -23,6 +23,60 @@ We have explored a novel solution based on Local Interpretable Model-agnostic Ex
 
 In this project, we have experimented with LIME tool[1] on the baseline deep learning model of emotion classifier (Xception) [2] using Kaggle face dataset [3]. For our experiments, we re-trained the emotion classifers on the full images (face and background). We also extended LIME tool to run on the deep models with grayscale images.  
 
+
+### Dependency
+---
+See ./Scripts/requirements.txt for required packages on the project  
+
+Terminal installation
+```bash
+$ pip install -r requirements.txt
+
+```
+
+### Installation instruction
+**Build project directories**
+```bash
+$ git clone git@github.com:PiSchool/intepreting-emotion-cnn.git
+$ cd intepreting-emotion-cnn/emoji-project/
+$ mkdir -p Biteam Dataset/Kaggle Interpreters
+```
+
+**Download XCeption classifier** 
+```bash
+$ git clone https://github.com/oarriaga/face_classification.git Biteam
+```
+
+**Install LIME interpreter and dependencies**
+```bash
+$ git clone https://github.com/marcotcr/lime.git Interpreters
+$ cd Interpreters/
+$ python setup.py install
+$ cd ..
+//update lime_image.py (copy update to lime main folder)
+$ cp -nr Scripts/lime_image.py Interpreters/lime/lime_image.py 
+```
+
+**Load csv dataset and put in the right folder**
+```bash
+//mov tar file to ./Dataset/Kaggle/ then unzip
+$ tar -xzf ./Dataset/Kaggle/fer2013.tar.gz -C ./Dataset/Kaggle/
+$ tar -xzf ./Dataset/Kaggle/fer2013.tar.gz -C ./Biteam/datasets/
+
+**Move sample tranined model**
+```bash
+$ cp -nr Scripts/fer2013_mini_XCEPTION.hdf5 Biteam/trained_models/emotion_models/fer2013_mini_XCEPTION.hdf5
+```
+
+
+**Make jpeg images from csv**
+```bash
+//download: https://kaggle2.blob.core.windows.net/forum-message-attachments/179911/6422/gen_record.py
+$ wget -O ./Dataset/Kaggle/fer2013/gen_record.py "https://kaggle2.blob.core.windows.net/forum-message-attachments/179911/6422/gen_record.py"
+//convert csv to images
+$ python ./Dataset/Kaggle/fer2013/gen_record.py
+```bash
+
 ### The dataset
 ---
 
