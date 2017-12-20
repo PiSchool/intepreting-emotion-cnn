@@ -33,7 +33,7 @@ $ git clone git@github.com:PiSchool/intepreting-emotion-cnn.git
 
 #### Dependency
 See requirements.txt for required packages on the project  
-See [scikit-learn] (http://scikit-learn.org/stable/install.html) for installation
+See [scikit-learn](http://scikit-learn.org/stable/install.html) for installation
 
 ```bash
 $ cd intepreting-emotion-cnn/
