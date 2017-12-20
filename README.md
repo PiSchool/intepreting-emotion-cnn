@@ -62,6 +62,7 @@ $ cp -nr Scripts/lime_image.py Interpreters/lime/lime_image.py
 //mov tar file to ./Dataset/Kaggle/ then unzip
 $ tar -xzf ./Dataset/Kaggle/fer2013.tar.gz -C ./Dataset/Kaggle/
 $ tar -xzf ./Dataset/Kaggle/fer2013.tar.gz -C ./Biteam/datasets/
+```
 
 **Move sample tranined model**
 ```bash
