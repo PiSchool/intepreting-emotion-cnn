@@ -57,8 +57,7 @@ $ cd ..
 $ cp -nr Scripts/lime_image.py Interpreters/lime/lime_image.py 
 ```
 
-**Load csv dataset and put in the right folder**
-[link](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data)
+**Load csv dataset and put in the right folder** [(link)](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data)
 ```bash
 //mov tar file to ./Dataset/Kaggle/ then unzip to the specific folders
 $ tar -xzf ./Dataset/Kaggle/fer2013.tar.gz -C ./Dataset/Kaggle/
