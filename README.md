@@ -55,7 +55,7 @@ $ git clone https://github.com/oarriaga/face_classification.git biteam
 _Download LIME interpreter_
 ```bash
 $ git clone https://github.com/marcotcr/lime.git interpreters
-//update lime_image.py (copy update to lime main folder)
+#update lime_image.py (copy update to lime main folder)
 $ cp -rf src/lime_image.py interpreters/lime/lime_image.py 
 ```
 Note: Make sure lime_image.py (this has been modified from the original one) is in this right destination path 
