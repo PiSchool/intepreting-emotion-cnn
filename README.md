@@ -62,7 +62,7 @@ Note: Make sure lime_image.py (this has been modified from the original one) is 
 
 _Load csv dataset and put in the right folder_ [(link)](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data)
 ```bash
-//mov tar file to ./Dataset/Kaggle/ then unzip to the specific folders
+//put tar file to "./dataset/kaggle/" then unzip to the specific folders
 $ tar -xzf ./dataset/kaggle/fer2013.tar.gz -C ./dataset/kaggle/
 $ tar -xzf ./dataset/kaggle/fer2013.tar.gz -C ./biteam/datasets/
 ```
