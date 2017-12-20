@@ -80,7 +80,8 @@ $ python ./Dataset/Kaggle/fer2013/gen_record.py
 **Usage**
 The project has been running on Ubuntu 16.04 LTS
 ```bash
-$ 
+$ cd Scripts 
+$ jupyter notebook lime_interpret_multiple_analysis_cfm.ipynb
 ```
 
 ### The dataset
