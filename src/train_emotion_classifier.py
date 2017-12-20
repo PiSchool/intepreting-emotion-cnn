@@ -7,16 +7,17 @@ Github: https://github.com/oarriaga
 Description: Train emotion classification model
 """
 import sys, os
-sys.path.append('../Biteam/src')
+sys.path.append('../biteam/src/')
+sys.path.append('../biteam/src/utils')
 
 from keras.callbacks import CSVLogger, ModelCheckpoint, EarlyStopping
 from keras.callbacks import ReduceLROnPlateau
 from keras.preprocessing.image import ImageDataGenerator
 
 from models.cnn import mini_XCEPTION
-from utils.datasets import DataManager
-from utils.datasets import split_data
-from utils.preprocessor import preprocess_input
+from datasets import DataManager
+from datasets import split_data
+from preprocessor import preprocess_input
 
 # parameters
 batch_size = 32
@@ -26,7 +27,7 @@ validation_split = .2
 verbose = 1
 num_classes = 7
 patience = 50
-base_path = '../Biteam/trained_models/emotion_models/'
+base_path = '../biteam/trained_models/emotion_models/'
 
 # data generator
 data_generator = ImageDataGenerator(
@@ -62,7 +63,7 @@ for dataset_name in datasets:
     callbacks = [model_checkpoint, csv_logger, early_stop, reduce_lr]
 
     # loading dataset
-    data_loader = DataManager(dataset_name, '../Biteam/datasets/fer2013/fer2013.csv', image_size=input_shape[:2])
+    data_loader = DataManager(dataset_name, '../biteam/datasets/fer2013/fer2013.csv', image_size=input_shape[:2])
     faces, emotions = data_loader.get_data()
     faces = preprocess_input(faces)
     num_samples, num_classes = emotions.shape

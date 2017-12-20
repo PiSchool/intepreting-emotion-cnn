@@ -3,14 +3,14 @@
 **Pi School of AI Programme**
 
 [//]: # (Image References)
-[image0]: ./images/intro.png "intro"
-[image1]: ./images/data_kaggle.png "data"
-[image2]: ./images/pipeline.png "lime process"
-[image3]: ./images/DeepXplore.png "future"
-[image4]: ./images/corresponding_classes.png "analysis_classes"
-[image5]: ./images/analysis_correct.png "analysis_right"
-[image6]: ./images/cfm.png "matrix"
-[image7]: ./images/analysis_wrong.png "analysis_wrong"
+[image0]: ../notebooks/images/intro.png "intro"
+[image1]: ../notebooks/images/data_kaggle.png "data"
+[image2]: ../notebooks/images/pipeline.png "lime process"
+[image3]: ../notebooks/images/DeepXplore.png "future"
+[image4]: ../notebooks/images/corresponding_classes.png "analysis_classes"
+[image5]: ../notebooks/images/analysis_correct.png "analysis_right"
+[image6]: ../notebooks/images/cfm.png "matrix"
+[image7]: ../notebooks/images/analysis_wrong.png "analysis_wrong"
 
 
 ### Overview 
@@ -23,64 +23,67 @@ We have explored a novel solution based on Local Interpretable Model-agnostic Ex
 
 In this project, we have experimented with LIME tool[1] on the baseline deep learning model of emotion classifier (Xception) [2] using Kaggle face dataset [3]. For our experiments, we re-trained the emotion classifers on the full images (face and background). We also extended LIME tool to run on the deep models with grayscale images.  
 
-
-### Dependency
+### Project setup
 ---
-See ./Scripts/requirements.txt for required packages on the project  
 
-Package installation
+#### Clone the project
 ```bash
+$ git clone git@github.com:PiSchool/intepreting-emotion-cnn.git
+```
+
+#### Dependency
+See requirements.txt for required packages on the project  
+See [scikit-learn] (http://scikit-learn.org/stable/install.html) for installation
+
+```bash
+$ cd intepreting-emotion-cnn/
 $ pip install -r requirements.txt
 
 ```
 
-### Terminal Installation (Linux) 
+#### Terminal installation (Linux) 
 **Prepare project directories**
 ```bash
-$ git clone git@github.com:PiSchool/intepreting-emotion-cnn.git
-$ cd intepreting-emotion-cnn/emoji-project/
-$ mkdir -p Biteam Dataset/Kaggle Interpreters
+$ mkdir -p biteam dataset/kaggle interpreters
 ```
 
 **Download XCeption classifier** 
 ```bash
-$ git clone https://github.com/oarriaga/face_classification.git Biteam
+$ git clone https://github.com/oarriaga/face_classification.git biteam
 ```
 
-**Install LIME interpreter and dependencies**
+**Download LIME interpreter**
 ```bash
-$ git clone https://github.com/marcotcr/lime.git Interpreters
-$ cd Interpreters/
-$ python setup.py install
-$ cd ..
+$ git clone https://github.com/marcotcr/lime.git interpreters
 //update lime_image.py (copy update to lime main folder)
-$ cp -nr Scripts/lime_image.py Interpreters/lime/lime_image.py 
+$ cp -rf src/lime_image.py interpreters/lime/lime_image.py 
 ```
+Note: Make sure lime_image.py (this has been modified from the original one) is in this right destination path 
 
 **Load csv dataset and put in the right folder** [(link)](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data)
 ```bash
 //mov tar file to ./Dataset/Kaggle/ then unzip to the specific folders
-$ tar -xzf ./Dataset/Kaggle/fer2013.tar.gz -C ./Dataset/Kaggle/
-$ tar -xzf ./Dataset/Kaggle/fer2013.tar.gz -C ./Biteam/datasets/
+$ tar -xzf ./dataset/kaggle/fer2013.tar.gz -C ./dataset/kaggle/
+$ tar -xzf ./dataset/kaggle/fer2013.tar.gz -C ./biteam/datasets/
 ```
 
 **Make jpeg images from csv**
 ```bash
 //download: https://kaggle2.blob.core.windows.net/forum-message-attachments/179911/6422/gen_record.py
-$ wget -O ./Dataset/Kaggle/fer2013/gen_record.py "https://kaggle2.blob.core.windows.net/forum-message-attachments/179911/6422/gen_record.py"
+$ wget -O ./dataset/kaggle/fer2013/gen_record.py "https://kaggle2.blob.core.windows.net/forum-message-attachments/179911/6422/gen_record.py"
 //convert csv to images
-$ python ./Dataset/Kaggle/fer2013/gen_record.py
+$ python ./dataset/kaggle/fer2013/gen_record.py
 ```
 
 **Move sample tranined model**
 ```bash
-$ cp -nr Scripts/fer2013_mini_XCEPTION.hdf5 Biteam/trained_models/emotion_models/fer2013_mini_XCEPTION.hdf5
+$ cp -rf ./fer2013_mini_XCEPTION.hdf5 ./biteam/trained_models/emotion_models/fer2013_mini_XCEPTION.hdf5
 ```
 
 **Usage**
 The project has been running on Ubuntu 16.04 LTS
 ```bash
-$ cd Scripts 
+$ cd notebooks 
 $ jupyter notebook lime_interpret_multiple_analysis_cfm.ipynb
 ```
 
@@ -100,7 +103,7 @@ number of images   = Angry:3,216, Disgust:344, Fear:3,259, Happy:5,741, Sad:3,86
 ### Emotion classifier: Convolutional Neural Network
 ---
 In this project, we uses convolutional neural network for emotion classification developed by [2] ([github](https://github.com/oarriaga/face_classification)). We have chosen this as the baseline model because it provides a reasonable accuracy with further insights that could be explored using the interpreter. Before we applied the model to the interpreter, we have re-trained the model with full images to confirm the good accuracy that we should expect. We obtained the test accuracy around 66%.
-(see  [code](https://github.com/PiSchool/intepreting-emotion-cnn/blob/master/emoji-project/Scripts/train_emotion_classifier.py) )
+(see  [code](https://github.com/PiSchool/intepreting-emotion-cnn/blob/master/src/train_emotion_classifier.py) )
 
 
 ### Explain the (LIME) explainer
@@ -143,8 +146,8 @@ To capture essential interpretation without losing generality in the data select
   
 
 Jupyter notebooks for the following analysis   
-	* Softmax probability (see [codes](https://github.com/PiSchool/intepreting-emotion-cnn/blob/master/emoji-project/Scripts/lime_interpret_multiple_analysis_sfm.ipynb))  
-	* Confusion matrix (see [codes](https://github.com/PiSchool/intepreting-emotion-cnn/blob/master/emoji-project/Scripts/lime_interpret_multiple_analysis_cfm.ipynb))  
+	* Softmax probability (see [codes](https://github.com/PiSchool/intepreting-emotion-cnn/blob/master/notebooks/lime_interpret_multiple_analysis_sfm.ipynb))  
+	* Confusion matrix (see [codes](https://github.com/PiSchool/intepreting-emotion-cnn/blob/master/notebooks/lime_interpret_multiple_analysis_cfm.ipynb))  
 
 
 ### Analysis
