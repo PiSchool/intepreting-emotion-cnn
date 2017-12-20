@@ -33,7 +33,7 @@ $ git clone git@github.com:PiSchool/intepreting-emotion-cnn.git
 
 #### Dependency
 See requirements.txt for required packages on the project  
-See [scikit-learn](http://scikit-learn.org/stable/install.html) for installation
+See [scikit-learn](http://scikit-learn.org/stable/install.html) for installation if needed
 
 ```bash
 $ cd intepreting-emotion-cnn/
@@ -47,7 +47,7 @@ _Prepare project directories_
 $ mkdir -p biteam dataset/kaggle interpreters
 ```
 
-_Download XCeption classifier_ 
+_Download XCeption emotion classifier_ 
 ```bash
 $ git clone https://github.com/oarriaga/face_classification.git biteam
 ```
