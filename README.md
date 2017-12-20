@@ -62,16 +62,16 @@ Note: Make sure lime_image.py (this has been modified from the original one) is 
 
 _Load csv dataset and put in the right folder_ [(link)](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data)
 ```bash
-//put tar file to "./dataset/kaggle/" then unzip to the specific folders
+#put tar file to "./dataset/kaggle/" then unzip to the specific folders
 $ tar -xzf ./dataset/kaggle/fer2013.tar.gz -C ./dataset/kaggle/
 $ tar -xzf ./dataset/kaggle/fer2013.tar.gz -C ./biteam/datasets/
 ```
 
 _Make jpeg images from csv_
 ```bash
-//download: https://kaggle2.blob.core.windows.net/forum-message-attachments/179911/6422/gen_record.py
+#download: https://kaggle2.blob.core.windows.net/forum-message-attachments/179911/6422/gen_record.py
 $ wget -O ./dataset/kaggle/fer2013/gen_record.py "https://kaggle2.blob.core.windows.net/forum-message-attachments/179911/6422/gen_record.py"
-//convert csv to images
+#convert csv to images
 $ python ./dataset/kaggle/fer2013/gen_record.py
 ```
 
