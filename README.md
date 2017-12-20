@@ -41,7 +41,7 @@ $ pip install -r requirements.txt
 
 ```
 
-#### Terminal installation (Linux) 
+#### Installation third party packages and data (Linux) 
 Prepare project directories
 ```bash
 $ mkdir -p biteam dataset/kaggle interpreters
@@ -80,8 +80,7 @@ Move sample tranined model
 $ cp -rf ./fer2013_mini_XCEPTION.hdf5 ./biteam/trained_models/emotion_models/fer2013_mini_XCEPTION.hdf5
 ```
 
-Usage
-The project has been running on Ubuntu 16.04 LTS
+Usage (The project has been running on Ubuntu 16.04 LTS)
 ```bash
 $ cd notebooks 
 $ jupyter notebook lime_interpret_multiple_analysis_cfm.ipynb
