@@ -80,7 +80,7 @@ $ python ./dataset/kaggle/fer2013/gen_record.py
 $ cp -rf ./fer2013_mini_XCEPTION.hdf5 ./biteam/trained_models/emotion_models/fer2013_mini_XCEPTION.hdf5
 ```
 
-### Usage   
+#### Usage   
 (The project has been running on Ubuntu 16.04 LTS)  
 ```bash
 $ cd notebooks 
