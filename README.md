@@ -3,14 +3,14 @@
 **Pi School of AI Programme**
 
 [//]: # (Image References)
-[image0]: ../notebooks/images/intro.png "intro"
-[image1]: ../notebooks/images/data_kaggle.png "data"
-[image2]: ../notebooks/images/pipeline.png "lime process"
-[image3]: ../notebooks/images/DeepXplore.png "future"
-[image4]: ../notebooks/images/corresponding_classes.png "analysis_classes"
-[image5]: ../notebooks/images/analysis_correct.png "analysis_right"
-[image6]: ../notebooks/images/cfm.png "matrix"
-[image7]: ../notebooks/images/analysis_wrong.png "analysis_wrong"
+[image0]: ./notebooks/images/intro.png "intro"
+[image1]: ./notebooks/images/data_kaggle.png "data"
+[image2]: ./notebooks/images/pipeline.png "lime process"
+[image3]: ./notebooks/images/DeepXplore.png "future"
+[image4]: ./notebooks/images/corresponding_classes.png "analysis_classes"
+[image5]: ./notebooks/images/analysis_correct.png "analysis_right"
+[image6]: ./notebooks/images/cfm.png "matrix"
+[image7]: ./notebooks/images/analysis_wrong.png "analysis_wrong"
 
 
 ### Overview 
