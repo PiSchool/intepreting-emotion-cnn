@@ -42,17 +42,17 @@ $ pip install -r requirements.txt
 ```
 
 #### Installation third party packages and data (Linux) 
-Prepare project directories
+_Prepare project directories_
 ```bash
 $ mkdir -p biteam dataset/kaggle interpreters
 ```
 
-Download XCeption classifier 
+_Download XCeption classifier_ 
 ```bash
 $ git clone https://github.com/oarriaga/face_classification.git biteam
 ```
 
-Download LIME interpreter
+_Download LIME interpreter_
 ```bash
 $ git clone https://github.com/marcotcr/lime.git interpreters
 //update lime_image.py (copy update to lime main folder)
@@ -67,7 +67,7 @@ $ tar -xzf ./dataset/kaggle/fer2013.tar.gz -C ./dataset/kaggle/
 $ tar -xzf ./dataset/kaggle/fer2013.tar.gz -C ./biteam/datasets/
 ```
 
-Make jpeg images from csv
+_Make jpeg images from csv_
 ```bash
 //download: https://kaggle2.blob.core.windows.net/forum-message-attachments/179911/6422/gen_record.py
 $ wget -O ./dataset/kaggle/fer2013/gen_record.py "https://kaggle2.blob.core.windows.net/forum-message-attachments/179911/6422/gen_record.py"
@@ -80,7 +80,7 @@ Move sample tranined model
 $ cp -rf ./fer2013_mini_XCEPTION.hdf5 ./biteam/trained_models/emotion_models/fer2013_mini_XCEPTION.hdf5
 ```
 
-Usage (The project has been running on Ubuntu 16.04 LTS)
+_Usage_ (The project has been running on Ubuntu 16.04 LTS)
 ```bash
 $ cd notebooks 
 $ jupyter notebook lime_interpret_multiple_analysis_cfm.ipynb
