@@ -65,18 +65,17 @@ $ tar -xzf ./Dataset/Kaggle/fer2013.tar.gz -C ./Dataset/Kaggle/
 $ tar -xzf ./Dataset/Kaggle/fer2013.tar.gz -C ./Biteam/datasets/
 ```
 
-**Move sample tranined model**
-```bash
-$ cp -nr Scripts/fer2013_mini_XCEPTION.hdf5 Biteam/trained_models/emotion_models/fer2013_mini_XCEPTION.hdf5
-```
-
-
 **Make jpeg images from csv**
 ```bash
 //download: https://kaggle2.blob.core.windows.net/forum-message-attachments/179911/6422/gen_record.py
 $ wget -O ./Dataset/Kaggle/fer2013/gen_record.py "https://kaggle2.blob.core.windows.net/forum-message-attachments/179911/6422/gen_record.py"
 //convert csv to images
 $ python ./Dataset/Kaggle/fer2013/gen_record.py
+```
+
+**Move sample tranined model**
+```bash
+$ cp -nr Scripts/fer2013_mini_XCEPTION.hdf5 Biteam/trained_models/emotion_models/fer2013_mini_XCEPTION.hdf5
 ```
 
 **Usage**
