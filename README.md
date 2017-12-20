@@ -28,14 +28,14 @@ In this project, we have experimented with LIME tool[1] on the baseline deep lea
 ---
 See ./Scripts/requirements.txt for required packages on the project  
 
-Terminal installation
+Package installation
 ```bash
 $ pip install -r requirements.txt
 
 ```
 
-### Installation instruction
-**Build project directories**
+### Terminal Installation (Linux) 
+**Prepare project directories**
 ```bash
 $ git clone git@github.com:PiSchool/intepreting-emotion-cnn.git
 $ cd intepreting-emotion-cnn/emoji-project/
@@ -75,7 +75,13 @@ $ cp -nr Scripts/fer2013_mini_XCEPTION.hdf5 Biteam/trained_models/emotion_models
 $ wget -O ./Dataset/Kaggle/fer2013/gen_record.py "https://kaggle2.blob.core.windows.net/forum-message-attachments/179911/6422/gen_record.py"
 //convert csv to images
 $ python ./Dataset/Kaggle/fer2013/gen_record.py
+```
+
+**Usage**
+The project has been running on Ubuntu 16.04 LTS
 ```bash
+$ 
+```
 
 ### The dataset
 ---
