@@ -33,6 +33,10 @@ The project has been running on Ubuntu 16.04 LTS. The following terminal command
 $ git clone git@github.com:PiSchool/intepreting-emotion-cnn.git
 ```
 
+#### Download dataset 
+Download the [dataset](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data) and put the tar.gz file in this current folder.
+
+
 #### Dependency
 See requirements.txt for required packages on the project  
 See [scikit-learn](http://scikit-learn.org/stable/install.html) for installation if needed
@@ -42,7 +46,7 @@ $ cd intepreting-emotion-cnn/
 $ pip install -r requirements.txt
 ```
 
-#### Installation third party packages and data
+#### Install third party packages
 _Prepare project directories_
 ```bash
 $ mkdir -p biteam dataset/kaggle interpreters
@@ -63,16 +67,15 @@ Note: Make sure lime_image.py (this has been modified from the original one) is 
 
 
 #### Unzip dataset 
-[(dataset link)](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data)
 ```bash
-#put tar file to "./dataset/kaggle/" then unzip to the specific folders
-$ tar -xzf ./dataset/kaggle/fer2013.tar.gz -C ./dataset/kaggle/
-$ tar -xzf ./dataset/kaggle/fer2013.tar.gz -C ./biteam/datasets/
+#unzip tar file to the specific folders
+$ tar -xzf fer2013.tar.gz -C ./dataset/kaggle/
+$ tar -xzf fer2013.tar.gz -C ./biteam/datasets/
 ```
 
 #### Make jpeg images from csv
 ```bash
-#download: https://kaggle2.blob.core.windows.net/forum-message-attachments/179911/6422/gen_record.py
+#download the script: https://kaggle2.blob.core.windows.net/forum-message-attachments/179911/6422/gen_record.py
 $ wget -O ./dataset/kaggle/fer2013/gen_record.py "https://kaggle2.blob.core.windows.net/forum-message-attachments/179911/6422/gen_record.py"
 #convert csv to images
 $ python ./dataset/kaggle/fer2013/gen_record.py
