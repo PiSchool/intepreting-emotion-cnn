@@ -34,7 +34,7 @@ $ git clone git@github.com:PiSchool/intepreting-emotion-cnn.git
 ```
 
 #### Download dataset 
-Download the [dataset](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data) and put the tar.gz file in this current folder.
+Download the [dataset](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data) and put the tar.gz file in this current folder(intepreting-emotion-cnn).
 
 
 #### Dependency
