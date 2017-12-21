@@ -42,7 +42,7 @@ $ cd intepreting-emotion-cnn/
 $ pip install -r requirements.txt
 ```
 
-#### Installation third party packages and data (Linux) 
+#### Installation third party packages and data
 _Prepare project directories_
 ```bash
 $ mkdir -p biteam dataset/kaggle interpreters
