@@ -25,6 +25,8 @@ In this project, we have experimented with LIME tool[1] on the baseline deep lea
 
 ### Project setup
 ---
+The project has been running on Ubuntu 16.04 LTS. The following terminal commands can be found in "install.sh". See Dependency section for the required packages.
+
 
 #### Clone the project
 ```bash
@@ -38,7 +40,6 @@ See [scikit-learn](http://scikit-learn.org/stable/install.html) for installation
 ```bash
 $ cd intepreting-emotion-cnn/
 $ pip install -r requirements.txt
-
 ```
 
 #### Installation third party packages and data (Linux) 
@@ -60,7 +61,9 @@ $ cp -rf src/lime_image.py interpreters/lime/lime_image.py
 ```
 Note: Make sure lime_image.py (this has been modified from the original one) is in this right destination path 
 
-_Load csv dataset and put in the right folder_ [(link)](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data)
+
+#### Unzip dataset 
+[(link)](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data)
 ```bash
 #put tar file to "./dataset/kaggle/" then unzip to the specific folders
 $ tar -xzf ./dataset/kaggle/fer2013.tar.gz -C ./dataset/kaggle/
@@ -80,8 +83,7 @@ $ python ./dataset/kaggle/fer2013/gen_record.py
 $ cp -rf ./fer2013_mini_XCEPTION.hdf5 ./biteam/trained_models/emotion_models/fer2013_mini_XCEPTION.hdf5
 ```
 
-#### Usage   
-(The project has been running on Ubuntu 16.04 LTS)  
+#### Usage     
 ```bash
 $ cd notebooks 
 $ jupyter notebook lime_interpret_multiple_analysis_cfm.ipynb
